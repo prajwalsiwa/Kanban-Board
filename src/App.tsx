@@ -4,7 +4,7 @@ import generateRoutes from "./routes/generateRoutes";
 
 function App() {
   return (
-    <div className=" flex justify-start item-start text-orange-900">
+    <div className="w-full h-full">
       {generateRoutes({ routes: appRoutes })}
     </div>
   );
