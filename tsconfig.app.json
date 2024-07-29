@@ -21,7 +21,24 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@Assets/*": ["assets/*"],
+      "@Utils/*": ["utils/*"],
+      "@Store/*": ["store/*"],
+      "@Constants/*": ["constants/*"],
+      "@Hooks/*": ["hooks/*"],
+      "@Api/*": ["api/*"],
+      "@Schemas/*": ["schemas/*"],
+      "@Services/*": ["services/*"],
+      "@Queries/*": ["api/queries/*"],
+      "@Routes/*": ["routes/*"],
+      "@Views/*": ["views/*"],
+      "@Components/*": ["components/*"],
+      // "@UserModule/*": ["modules/user-auth-module/src/*"]
+    }
+    
   },
-  "include": ["src"]
+  "include": [".eslintrc.cjs", "src", "src/**/*.ts"],
 }
