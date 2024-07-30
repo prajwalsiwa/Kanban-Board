@@ -12,7 +12,6 @@ function generateRoutes({
   routes,
   fallback = <Fallback />,
 }: generateRoutesProps) {
-  console.log(routes);
   return (
     <Suspense fallback={fallback}>
       <Routes>

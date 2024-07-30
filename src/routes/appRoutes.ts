@@ -3,6 +3,7 @@ import Login from "../views/Login";
 import { IRoute } from "./types";
 import ResetLink from "@Views/Login/ResetLink";
 import ResetPassword from "@Views/Login/ResetPassword";
+import LandingPage from "@Views/Dashboard";
 
 const appRoutes: IRoute[] = [
   {
@@ -24,6 +25,11 @@ const appRoutes: IRoute[] = [
     name: "Sign up",
     path: "/resetPassword",
     component: ResetPassword,
+  },
+  {
+    name: "Dashboard",
+    path: "/",
+    component: LandingPage,
   },
 ];
 

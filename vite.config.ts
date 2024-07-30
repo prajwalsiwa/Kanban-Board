@@ -19,11 +19,7 @@ export default defineConfig({
       '@Queries': new URL('./src/api/queries/', import.meta.url).pathname,
       '@Routes': new URL('./src/routes/', import.meta.url).pathname,
       '@Views': new URL('./src/views/', import.meta.url).pathname,
-      '@Components': new URL('./src/components/', import.meta.url).pathname,
-      '@UserModule': new URL(
-        './src/modules/user-auth-module/src/',
-        import.meta.url,
-      ).pathname,
+      '@Components': new URL('./src/Components/', import.meta.url).pathname,
     },
   },
 })
