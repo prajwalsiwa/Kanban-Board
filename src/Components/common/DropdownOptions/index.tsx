@@ -6,6 +6,8 @@ interface optionPropsTypes {
   id: number;
   label: string;
   onClick: () => void;
+  iconName: string;
+  iconClassName?: string;
 }
 
 interface DropdownOptionsPropsTypes {
@@ -24,19 +26,28 @@ function DropdownOptions({ options }: DropdownOptionsPropsTypes) {
       />
 
       <ul
-        className={`flex-col justify-start items-center absolute border-gray-500 border py-2  rounded-lg top-10 w-40 ${
+        className={`flex-col justify-start items-center absolute border-gray-500 border py-2 px-2 z-50   rounded-lg top-10 w-40 bg-[#161B22] ${
           isOpen ? "flex" : "hidden"
         }`}
       >
-        {options.map(({ id, label, onClick }: optionPropsTypes) => (
-          <li
-            key={id}
-            onClick={onClick}
-            className="flex justify-start items-start w-full text-sm hover:bg-gray-500 pl-3 py-2"
-          >
-            {label}
-          </li>
-        ))}
+        {options.map(
+          ({
+            id,
+            label,
+            onClick,
+            iconName,
+            iconClassName,
+          }: optionPropsTypes) => (
+            <li
+              key={id}
+              onClick={onClick}
+              className="flex justify-start  w-full text-sm rounded-lg hover:bg-gray-500 pl-3 py-2 gap-2 items-center"
+            >
+              <Icon name={iconName} className={iconClassName} />
+              {label}
+            </li>
+          )
+        )}
       </ul>
     </div>
   );
