@@ -8,13 +8,9 @@ function SideBar() {
     setIsCollapsed((prev) => !prev);
   };
 
-  const handleAddClick = () => {
-  
-  };
+  const handleAddClick = () => {};
 
-  const handleDeleteClick = () => {
-
-  };
+  const handleDeleteClick = () => {};
 
   return (
     <div className="h-full">
@@ -48,13 +44,23 @@ function SideBar() {
           <div>
             <div className="flex justify-between items-center px-4 py-2  border-gray-500 border">
               <div className="text-md font-medium">Your Boards</div>
-              <Icon name="add" onClick={handleAddClick} className="w-8 h-8 rounded-lg hover:bg-gray-500 flex justify-center items-center" />
+              <Icon
+                name="add"
+                onClick={handleAddClick}
+                className="w-8 h-8 rounded-lg hover:bg-gray-500 flex justify-center items-center"
+              />
             </div>
             <div className="px-4 py-2 flex justify-between items-center ">
               <p className="">My Todo</p>
               <DropdownOptions
                 options={[
-                  { id: 1, label: "Delete Board", onClick: handleDeleteClick },
+                  {
+                    id: 1,
+                    label: "Delete Board",
+                    onClick: handleDeleteClick,
+                    iconName: "delete",
+                    iconClassName: "text-red-500",
+                  },
                 ]}
               />
             </div>
