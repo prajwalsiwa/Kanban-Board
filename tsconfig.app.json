@@ -53,6 +53,7 @@
       "@Routes/*": ["routes/*"],
       "@Views/*": ["views/*"],
       "@Components/*": ["Components/*"],
+      "@Templates/*": ["templates/*"]
     }
   },
   "include": [".eslintrc.cjs", "src", "src/**/*.ts"],
