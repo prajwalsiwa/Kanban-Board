@@ -1,15 +1,17 @@
 import Button from "@Components/common/Button";
 import RoundedContainer from "@Components/common/RoundedContainer";
 import { ChangeEvent, useState } from "react";
+import { message } from "../WorkSpace";
 
 interface boardProps {
-  taskList: object[];
+  taskList: message[];
   label: string;
+  labelColor?: string;
 }
 
-function Board({ taskList, label }: boardProps) {
+function Board({ taskList, label, labelColor }: boardProps) {
   const [value, setValue] = useState<string | null>(null);
-  const [newMessageList, setnewMessageList] = useState<message[]>(taskList);
+  const [newMessageList, setnewMessageList] = useState(taskList);
 
   const handleAddnewMessageList = () => {
     if (value) {
@@ -31,7 +33,7 @@ function Board({ taskList, label }: boardProps) {
   return (
     <div className="w-[18rem] h-fit  border border-gray-600 rounded-lg">
       <div className="flex justify-start pl-4 py-2 border-b">
-        <p className="title text-lg font-semibold">{label}</p>
+        <p className={`title text-lg font-semibold ${labelColor}`}>{label}</p>
       </div>
       <div className="p-2 flex flex-col gap-2">
         {newMessageList.map((msg, index) => (

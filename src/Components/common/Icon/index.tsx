@@ -12,7 +12,7 @@ function Icon({
   className,
 }: IconPropTypes) {
   return (
-    <i className={`${iconSymbolType} ${className}`} onClick={onClick}>
+    <i className={`${iconSymbolType} ${className} cursor-pointer`} onClick={onClick}>
       {name}
     </i>
   );
