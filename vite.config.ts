@@ -8,6 +8,7 @@ export default defineConfig({
     extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
       "@": new URL("./src/", import.meta.url).pathname,
+      "@App": new URL("./src/App.tsx", import.meta.url).pathname,
       "@Assets": new URL("./src/assets/", import.meta.url).pathname,
       "@Utils": new URL("./src/utils/", import.meta.url).pathname,
       "@Store": new URL("./src/store/", import.meta.url).pathname,

@@ -41,6 +41,7 @@
     "noUnusedParameters": false,
     "downlevelIteration": true,
     "paths": {
+      "@App":["App.tsx"],
       "@Assets/*": ["assets/*"],
       "@Utils/*": ["utils/*"],
       "@Store/*": ["store/*"],
