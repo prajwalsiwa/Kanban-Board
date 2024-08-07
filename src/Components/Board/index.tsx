@@ -1,9 +1,10 @@
+import { message } from "@Components/Dashboard/WorkSpace";
 import Button from "@Components/common/Button";
 import RoundedContainer from "@Components/common/RoundedContainer";
 import { ChangeEvent, useState } from "react";
 
 interface boardProps {
-  taskList: object[];
+  taskList: message[];
   label: string;
 }
 
