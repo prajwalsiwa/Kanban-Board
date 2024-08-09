@@ -62,7 +62,6 @@ function Login() {
                 <a
                   href="./signup"
                   className="text-gray-600 hover:text-gray-900 font-normal underline "
-                  
                 >
                   Sign up
                 </a>
