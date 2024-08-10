@@ -2,7 +2,6 @@ import { useState } from "react";
 import googleIcon from "@Assets/Google.svg";
 import kanban from "@Assets/kanbanImage.jpg";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 
 type loginData = {
   email: string;
@@ -14,7 +13,6 @@ function Login() {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm<loginData>();
 
@@ -109,7 +107,6 @@ function Login() {
               </div>
             </div>
           </form>
-          <DevTool control={control} />
         </div>
       </div>
     </div>
