@@ -12,11 +12,14 @@ function Signup() {
         <img src={kanban} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="login h-full  w-[40%]  bg-gray-100 flex gap-36  pt-20 flex-col">
-        <div className="flex flex-col">
-          <h1>Kanban Board</h1>
+        <div className="flex flex-col w-full justify-center items-center">
+          <h1>
+            Kanban Board
+          </h1>
         </div>
         <div className="flex px-56 gap-12 flex-col w-full">
-          <h2 className="text-xl">Sign up</h2>
+          <h2 className="text-xl">Create an Kanban Board Account</h2>
+
           <div className="flex flex-col gap-6">
             <div className="flex flex-col justify-start items-start w-full">
               <label htmlFor="username">Email</label>
