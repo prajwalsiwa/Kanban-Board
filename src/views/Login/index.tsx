@@ -30,7 +30,7 @@ function Login() {
         <img src={kanban} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="login h-full  w-[40%]  bg-gray-100 flex gap-36  pt-20 flex-col">
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full justify-center items-center">
           <h1>Kanban Board</h1>
         </div>
         <div className="flex px-56 gap-12 flex-col w-full">
