@@ -32,7 +32,10 @@ function Login() {
           <h1>Kanban Board</h1>
         </div>
         <div className="flex px-56 gap-12 flex-col w-full">
-          <h2 className="text-xl">Welcome to Kanban Board</h2>
+        <div className="flex w-full justify-center items-center flex-col gap-10">
+            <h3>Stop starting, start finishing</h3>
+            <h2 className="text-xl">Welcome to Kanban Board</h2>
+          </div>
           <form onSubmit={handleSubmit(handleLoginSubmit)}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col justify-start items-start w-full">
