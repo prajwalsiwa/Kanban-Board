@@ -26,21 +26,21 @@ function Login() {
 
   return (
     <div className="w-screen h-screen flex text-black">
-      <div className="image h-full w-[60%] ">
+      <div className="image h-full xl:w-[60%]  ">
         <img src={kanban} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="login h-full  w-[40%]  bg-gray-100 flex gap-36  pt-20 flex-col">
-        <div className="flex flex-col w-full justify-center items-center">
+      <div className="login h-full  w-[55rem]  bg-gray-100 flex items-center justify-center  gap-10   flex-col">
+        <div className="flex flex-col w-full justify-center gap-5 items-center">
           <h1>Kanban Board</h1>
-        </div>
-        <div className="flex px-56 gap-12 flex-col w-full">
-        <div className="flex w-full justify-center items-center flex-col gap-10">
             <h3>Stop starting, start finishing</h3>
+        </div>
+        <div className="flex justify-center items-center gap-12 flex-col w-[40rem]">
+        <div className="flex justify-center items-center flex-col gap-10">
             <h2 className="text-xl">Welcome to Kanban Board</h2>
           </div>
           <form onSubmit={handleSubmit(handleLoginSubmit)}>
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col justify-start items-start w-full">
+              <div className="flex flex-col justify-start items-start">
                 <label htmlFor="email">Email</label>
                 <input
                   {...register("email", {
@@ -55,7 +55,7 @@ function Login() {
                   })}
                   id="username"
                   type="text"
-                  className="border rounded-lg border-b-1 bg-white  naxatw-border-gray-300   w-full py-2 px-1  focus:!outline focus:outline-1 focus:outline-gray-500 outline-gray-400 "
+                  className="border w-[20rem] rounded-lg border-b-1 bg-white  naxatw-border-gray-300  py-2 px-1  focus:!outline focus:outline-1 focus:outline-gray-500 outline-gray-400 "
                 />
                 <p className="text-red-500">{errors?.email?.message}</p>
               </div>
@@ -70,7 +70,7 @@ function Login() {
                   })}
                   id="password"
                   type={isVisible ? "text" : "password"}
-                  className="border  rounded-lg border-b-1 bg-white naxatw-border-gray-300 p-1 py-2 w-full focus:!outline focus:outline-1 focus:outline-gray-500 outline-gray-300"
+                  className="border w-[20rem]  rounded-lg border-b-1 bg-white naxatw-border-gray-300 p-1 py-2  focus:!outline focus:outline-1 focus:outline-gray-500 outline-gray-300"
                 />
                 <p className="text-red-500">{errors?.password?.message}</p>
                 <i
@@ -90,7 +90,7 @@ function Login() {
               <div className="button-section  gap-6  flex flex-col w-full">
                 <button
                   type="submit"
-                  className="bg-blue-700 rounded-lg text-white hover:bg-blue-500 w-full py-2 "
+                  className="bg-blue-700 w-[20rem] rounded-lg text-white hover:bg-blue-500  py-2 "
                 >
                   Sign in
                 </button>
