@@ -2,6 +2,7 @@ import { useState } from "react";
 import googleIcon from "@Assets/Google.svg";
 import kanban from "@Assets/kanbanImage.jpg";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 type loginData = {
   email: string;
@@ -10,6 +11,8 @@ type loginData = {
 
 function Login() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -30,10 +33,10 @@ function Login() {
       <div className="login h-full  w-[55rem]  bg-gray-100 flex items-center justify-center  gap-10   flex-col">
         <div className="flex flex-col w-full justify-center gap-5 items-center">
           <h1>Kanban Board</h1>
-            <h3>Stop starting, start finishing</h3>
+          <h3>Stop starting, start finishing</h3>
         </div>
         <div className="flex justify-center items-center gap-12 flex-col w-[40rem]">
-        <div className="flex justify-center items-center flex-col gap-10">
+          <div className="flex justify-center items-center flex-col gap-10">
             <h2 className="text-xl">Welcome to Kanban Board</h2>
           </div>
           <form onSubmit={handleSubmit(handleLoginSubmit)}>
@@ -79,10 +82,13 @@ function Login() {
                 </i>
                 {/* <i className="material-symbols-outlined absolute right-3 bottom-2 cursor-pointer font-normal">visibility_off</i> */}
               </div>
-              <div className="justify-end flex items-end !underline">
-                <a href="./reset" className="hover:text-blue-800">
-                  Forgot Password
-                </a>
+              <div
+                className="justify-end flex items-end !underline hover:text-blue-800 cursor-pointer text-blue-500"
+                onClick={() => navigate("/reset")}
+              >
+                {/* <a href="./reset" className="hover:text-blue-800"> */}
+                Forgot Password
+                {/* </a> */}
               </div>
 
               <div className="button-section  gap-6  flex flex-col w-full">
@@ -94,12 +100,12 @@ function Login() {
                 </button>
                 <div className="flex justify-center items-center gap-1">
                   <p>Don't have an account?</p>{" "}
-                  <a
-                    href="./signup"
-                    className="text-gray-600 hover:text-gray-900 font-normal underline "
+                  <div
+                    className="hover:text-blue-800 font-normal underline cursor-pointer text-blue-500 "
+                    onClick={() => navigate("/signup")}
                   >
                     Sign up
-                  </a>
+                  </div>
                 </div>
                 <button
                   type="submit"
