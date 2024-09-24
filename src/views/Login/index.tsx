@@ -42,7 +42,7 @@ function Login() {
           <form onSubmit={handleSubmit(handleLoginSubmit)}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col justify-start items-start">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Username</label>
                 <input
                   {...register("email", {
                     required: {
