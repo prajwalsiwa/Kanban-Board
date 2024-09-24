@@ -42,6 +42,7 @@
     "downlevelIteration": true,
     "paths": {
       "@App":["App.tsx"],
+      "@global":["global.ts"],
       "@Assets/*": ["assets/*"],
       "@Utils/*": ["utils/*"],
       "@Store/*": ["store/*"],
@@ -57,6 +58,6 @@
       "@Templates/*": ["templates/*"]
     }
   },
-  "include": [".eslintrc.cjs", "src", "src/**/*.ts"],
+  "include": [".eslintrc.cjs", "src", "src/**/*.ts","src/vite-env.d.ts"],
   "exclude": ["node_modules", "dist"],
 }
